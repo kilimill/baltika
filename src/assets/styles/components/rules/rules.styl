@@ -1,0 +1,205 @@
+.Rules
+	&:before
+		content ''
+		position fixed
+		left 0
+		top 0
+		width vh(360)
+		height 100%
+		background-image url('./assets/img/face.png')
+		background-size cover
+		z-index 1
+		display none
+		@media $mobile
+			display block
+			position absolute
+			height vm(297)
+			width vm(143)
+			top auto
+			bottom 0
+
+.rules
+	position relative
+	padding-top vh(42)
+	@media $tovw
+		padding-top vw(42)
+	@media $mobile
+		display flex
+		flex-direction column-reverse
+		padding-top 0
+		min-height inherit
+	&:before
+		content ''
+		position fixed
+		left 0
+		top 0
+		width vh(360)
+		height 100%
+		background-image url('./assets/img/face.png')
+		background-size cover
+		background-position right
+		z-index 1
+		@media $tovw
+			width vw(360)
+		@media $mobile
+			display none
+			position absolute
+			height vm(297)
+			width vm(143)
+			top auto
+			bottom -15%
+	&__marquee
+		width 100%
+		overflow hidden
+		margin-bottom vh(95)
+		will-change transform
+		@media $tovw
+			margin-bottom vw(95)
+		@media $mobile
+			margin-bottom 0
+			margin-top auto
+		span
+			ff $din
+			fontify vh(180) 700 1
+			text-transform uppercase
+			letter-spacing .15em
+			color $white
+			display inline-block
+			white-space nowrap
+			animation scrollRules 40s infinite linear
+			margin-left 40%
+			@media $tovw
+				fontify vw(180) 700 1
+			@media $mobile
+				fontify vm(47) 700 1
+				letter-spacing 0
+	&__container
+		dfv()
+		margin-left vh(243)
+		@media $tovw
+			margin-left vw(243)
+		@media $mobile
+			margin-left 0
+			padding-left vm(20)
+			padding-right vm(12)
+			margin-bottom vm(33)
+	&__title
+		fontify vh(44) 400 vh(45)
+		color $white
+		margin-bottom vh(55)
+		margin-left vh(94)
+		@media $tovw
+			fontify vw(44) 400 vw(45)
+			margin-bottom vw(55)
+			margin-left vw(94)
+		@media $mobile
+			fontify vm(30) 400 vm(35)
+			margin-bottom vm(18)
+			margin-left 0
+	&__list
+		df()
+		@media $mobile
+			dfv()
+	&__list-item
+		df(center,)
+		margin-right vh(43)
+		@media $tovw
+			margin-right vw(43)
+		@media $mobile
+			margin-right 0
+			margin-bottom vm(19)
+		&:last-child
+			margin-right 0
+			@media $mobile
+				margin-bottom vm(10)
+	&__list-icon
+		flex-shrink 0
+		&--first
+			margin-right vh(18)
+			width vh(91)
+			height vh(127)
+			animation iconAnim1 5s infinite linear
+			object-fit cover
+			@media $tovw
+				margin-right vw(18)
+				width vw(91)
+				height vw(127)
+			@media $mobile
+				width vm(50)
+				height vm(70)
+				margin-right vm(14)
+		&--second
+			margin-right vh(28)
+			width vh(74)
+			height vh(110)
+			animation iconAnim2 4s infinite linear
+			transition-delay .8s
+			object-fit cover
+			@media $tovw
+				margin-right vw(28)
+				width vw(74)
+				height vw(110)
+			@media $mobile
+				width vm(40)
+				height vm(60)
+				margin-right vm(23)
+				margin-left vm(61)
+		&--third
+			margin-right vh(12)
+			width vh(136)
+			height vh(135)
+			animation iconAnim3 4s infinite linear
+			transition-delay .5s
+			object-fit cover
+			@media $tovw
+				margin-right vw(12)
+				width vw(136)
+				height vw(135)
+			@media $mobile
+				margin-right vm(7)
+				width vm(68)
+				height vm(68)
+				margin-left vm(111)
+	&__list-text
+		fontify vh(22) 400 vh(24)
+		color $white
+		@media $tovw
+			fontify vw(22) 400 vw(24)
+		@media $mobile
+			fontify vm(16) 400 vm(18)
+	&__rules
+		fontify vm(10) 400 1
+		color $white
+		border-bottom 1px solid $white
+		align-self flex-end
+		margin-right vm(6)
+
+@keyframes scrollRules
+	from
+		transform translateX(0)
+	to
+		transform translateX(-70%)
+
+@keyframes iconAnim1
+	0%
+		transform rotate(0deg)
+	50%
+		transform rotate(26deg)
+	100%
+		transform rotate(0deg)
+
+@keyframes iconAnim2
+	0%
+		transform rotate(0deg)
+	50%
+		transform rotate(-26deg)
+	100%
+		transform rotate(0deg)
+
+@keyframes iconAnim3
+	0%
+		transform rotate(0deg)
+	50%
+		transform rotate(26deg)
+	100%
+		transform rotate(0deg)

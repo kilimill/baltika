@@ -1,0 +1,122 @@
+.footer
+	padding-bottom vh(9)
+	width 100%
+	position relative
+	z-index 2
+	@media $tovw
+		padding-bottom vw(9)
+	@media $mobile
+		margin-top auto
+		padding-bottom vm(5)
+		overflow hidden
+	.wrapper
+		df(center,space-between)
+		padding-right vh(10)
+		padding-left vh(30)
+		@media $tovw
+			padding-right vw(10)
+			padding-left vw(30)
+		@media $mobile
+			padding-left 0
+			padding-right vm(5)
+	&__left
+		df(center,)
+	&__container
+		df(center)
+	&__link
+		display inline-block
+	&__baltika
+		width vh(58)
+		height vh(47)
+		margin-right vh(15)
+		@media $tovw
+			width vw(58)
+			height vw(47)
+			margin-right vw(15)
+	&__text
+		fontify vh(9) 400 1
+		opacity .7
+		color $white
+		text-align center
+		@media $tovw
+			fontify vw(9) 400 1
+	&__hockey
+		width vh(60)
+		height vh(61)
+		@media $tovw
+			width vw(60)
+			height vw(61)
+	&__right-img
+		width vh(110)
+		height vh(110)
+		object-fit cover
+		@media $tovw
+			width vw(110)
+			height vw(110)
+		@media $mobile
+			width vm(80)
+			height vm(80)
+	&__center
+		margin-left vh(-60)
+		margin-top vh(-5)
+		@media $tovw
+			margin-left vw(-60)
+			margin-top vw(-5)
+		@media $mobile
+			margin-left vm(64)
+			margin-top vm(-12)
+	&__next
+		fontify vh(20) 400 vh(24)
+		color rgba(255,255,255,.7)
+		position relative
+		@media $tovw
+			fontify vw(20) 400 vw(24)
+		@media $mobile
+			fontify vm(12) 400 vm(24)
+		span
+			position absolute
+			bottom vh(-54)
+			left 50%
+			transform translate(-50%, 0)
+			height vh(50)
+			width 1px
+			background-color rgba(255,255,255,.25)
+			overflow hidden
+			@media $tovw
+				bottom vw(-54)
+				height vw(50)
+			@media $mobile
+				height vm(35)
+				bottom vm(-39)
+			&:before
+				content ''
+				position absolute
+				width 100%
+				height 100%
+				top 0
+				left 0
+				background-color $white
+				transform-origin 0 0
+				animation-name lineAnimation
+				animation-duration 3s
+				animation-iteration-count infinite
+	&__rules
+		position absolute
+		left vh(200)
+		top vh(23)
+		fontify vh(15) 700 1
+		color $white
+		border-bottom 1px solid $white
+		transition .4s border-color
+		opacity .7
+		@media $tovw
+			left vw(200)
+			top vw(23)
+			fontify vw(15) 400 1
+		&:hover
+			border-color $t
+@keyframes lineAnimation
+	0%
+		transform translateY(-100%) scaleY(.2)
+	100%
+		transform translateY(200%) scaleY(1.5)

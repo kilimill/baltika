@@ -1,0 +1,56 @@
+.Rules
+	&:before
+		left -100%
+		transition left .6s
+		will-change left
+.rules
+	&:before
+		left -100%
+		transition left .6s
+		will-change left
+	&__marquee
+		opacity 0
+		transition opacity .8s
+	&__title
+		opacity 0
+		transform translateY(100%)
+		transition opacity .8s, transform .8s
+		will-change transform
+	&__list
+		opacity 0
+		transform translateY(100%)
+		transition opacity .8s, transform .8s
+		will-change transform
+	&__rules
+		opacity 0
+		transform translateY(200%)
+		transition opacity .8s, transform .8s
+		will-change transform
+
+.Rules[mobileloaded]
+	&:before
+		// transition-delay .2s
+		@media $mobile
+			left vm(-14)
+
+.rules[loaded]
+	&:before
+		left 0
+		// transition-delay .2s
+		@media $mobile
+			left vm(-14)
+	.rules__marquee
+		opacity 1
+		// transition-delay .1s
+	.rules__title
+		opacity 1
+		transform translateY(0)
+		// transition-delay .5s
+	.rules__list
+		opacity 1
+		transform translateY(0)
+		// transition-delay .6s
+	.rules__rules
+		opacity 1
+		transform translateY(0)
+		// transition-delay .9s

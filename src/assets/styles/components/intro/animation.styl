@@ -1,0 +1,80 @@
+.intro
+	&__row
+		&:nth-child(1)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+			transition-delay 0s
+		&:nth-child(2)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+			transition-delay 0s
+		&:nth-child(3)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+			transition-delay 0s
+	&__mtext
+		opacity 0
+		transition opacity .4s
+		transition-delay 0s
+	&__stext
+		opacity 0
+		transition opacity .4s
+		transition-delay 0s
+	&__puck
+		opacity 0
+		right -200%
+		transform translateY(-50%) scale(0)
+		transition opacity .5s, right .5s
+		will-change right
+		transition-delay 0s
+	&__bottle
+		will-change bottom
+		bottom -160%
+		transition bottom .8s
+		transition-delay 0s
+
+.intro[loaded]
+	.intro
+		&__row
+			&:nth-child(1)
+				opacity 1
+				transform translateY(0)
+				// transition-delay 0s
+			&:nth-child(2)
+				opacity 1
+				transform translateY(0)
+				// transition-delay .3s
+			&:nth-child(3)
+				opacity 1
+				transform translateY(0)
+				// transition-delay .5s
+		&__puck
+			opacity 1
+			right 31%
+			transform translateY(-50%) scale(1)
+			// transition-delay 1.3s
+			@media $mobile
+				right -7%
+		&__mtext
+			opacity 1
+			// transition-delay 1s
+		&__stext
+			opacity 1
+			// transition-delay 1s
+		&__bottle
+			bottom -56%
+			// transition-delay 1.8s
+			@media $mobile
+				bottom -25%
+
+
+.ie
+	.intro[loaded]
+		.intro__puck
+			right 36%

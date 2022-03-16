@@ -1,0 +1,128 @@
+.Product
+	position relative
+	&:before
+		content ''
+		position fixed
+		left 0
+		bottom 0
+		width vh(360)
+		height 100%
+		background-image url('./assets/img/players.png')
+		background-size cover
+		z-index 1
+		display none
+		@media $mobile
+			display block
+			position absolute
+			width vm(337)
+			height vm(274)
+			left vm(-7)
+			bottom vm(-5)
+.product
+	position relative
+	z-index 1
+	margin-top vh(-12)
+	dfv()
+	margin-bottom vh(-12)
+	@media $tovw
+		margin-top vw(-12)
+		margin-bottom vw(-12)
+	@media $mobile
+		padding 0 vm(20)
+		padding-top vm(5)
+		margin 0
+		min-height inherit
+	&__players
+		object-fit cover
+		width vh(725)
+		height vh(605)
+		position fixed
+		bottom vh(-30)
+		left vh(-153)
+		z-index 1
+		@media $tovw
+			width vw(725)
+			height vw(605)
+			bottom vw(-30)
+			left vw(-153)
+		@media $mobile
+			display none
+			position absolute
+			width vm(337)
+			height vm(274)
+			left vm(-7)
+			bottom vm(-85)
+	&__b7
+		object-fit cover
+		width vh(241)
+		height vh(668.5)
+		position fixed
+		right vh(5)
+		bottom vh(-122)
+		transform rotate(9deg)
+		@media $tovw
+			width vw(241)
+			height vw(668.5)
+			right vw(5)
+			bottom vw(-122)
+		@media $mobile
+			position absolute
+			width vm(89)
+			height vm(289)
+			right auto
+			bottom auto
+			left vm(10)
+			top vm(-36)
+			z-index -1
+	&__title
+		ff $din
+		fontify vh(137) 700 1
+		text-transform uppercase
+		color $white
+		letter-spacing .18em
+		position relative
+		@media $tovw
+			fontify vw(137) 700 1
+		@media $mobile
+			fontify vm(47) 700 vm(50)
+			letter-spacing 0
+			align-self flex-end
+		&:nth-child(2)
+			margin-left vh(76)
+			margin-bottom vh(5)
+			@media $tovw
+				margin-left vw(76)
+				margin-bottom vw(5)
+			@media $mobile
+				margin 0
+		&:nth-child(3)
+			align-self flex-end
+			margin-right vh(54)
+			margin-bottom vh(10)
+			@media $tovw
+				margin-right vw(54)
+				margin-bottom vw(10)
+			@media $mobile
+				margin 0
+		&:nth-child(4)
+			margin-left vh(269)
+			margin-bottom vh(10)
+			z-index 1
+			@media $tovw
+				margin-left vw(269)
+				margin-bottom vw(10)
+			@media $mobile
+				margin 0
+		&:nth-child(5)
+			z-index 1
+			margin-left vh(22)
+			@media $tovw
+				margin-left vw(22)
+			@media $mobile
+				margin 0
+			span
+				margin-left vh(14)
+				@media $tovw
+					margin-left vw(14)
+				@media $mobile
+					margin-left vm(6)

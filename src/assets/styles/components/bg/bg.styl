@@ -1,0 +1,75 @@
+.ie
+	.bg
+		&__blue
+			opacity .3
+		&__red
+			opacity .5
+		&__redtwo
+			opacity .5
+		&__redthree
+			opacity .5
+
+.bg
+	width 100%
+	height 100%
+	position absolute
+	left 0
+	top 0
+	@media $mobile
+		position fixed
+		height 100vh
+	&__img
+		width 100%
+		height 100%
+		position relative
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 0
+			right 0
+			bottom 0
+			background-color #0B1930
+		img
+			width 100%
+			height 100%
+			object-fit cover
+			opacity .2
+	&__blue
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		background #082963
+		mix-blend-mode color
+	&__red
+		position absolute
+		right 0
+		top 0
+		width vh(368)
+		height 100%
+		background #FF0101
+		mix-blend-mode color
+		@media $tovw
+			width vw(368)
+		@media $mobile
+			width 100vw!important
+			height vm(260)
+	&__redtwo
+		position absolute
+		left 0
+		top 0
+		width 0
+		height 100%
+		background #FF0101
+		mix-blend-mode color
+	&__redthree
+		position absolute
+		right 0
+		top 0
+		width 0
+		height 100%
+		background #FF0101
+		mix-blend-mode normal
+		opacity 0.5

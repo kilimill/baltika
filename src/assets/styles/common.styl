@@ -1,0 +1,38 @@
+html
+	ff $os
+body
+	oh()
+	background-color #082963
+	@media $mobile
+		overflow-y auto
+.main
+	height 100vh
+	width 100vw
+	dfv(,space-between)
+	position relative
+	z-index 1
+	transition .8s transform
+	&.burgeropen
+		@media $desktop
+			transform translateX(vh(326))
+		@media $tovw
+			transform translateX(vw(326))
+	@media $mobile
+		height auto
+		overflow hidden
+		min-height 100vh
+		justify-content flex-start
+	&__content
+		width 100%
+		// height 100%
+.wrapper
+	width 100%
+	padding 0 vh(30)
+	@media $tovw
+		padding 0 vw(30)
+	@media $mobile
+		padding 0 vm(20)
+
+.nodelay .js-tweenelem
+	transition-delay 0s!important
+	transition none!important

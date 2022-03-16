@@ -1,0 +1,127 @@
+.Intro
+	.main__content
+		@media $mobile
+			margin auto 0
+
+.ie
+	.intro__puck
+		top 0
+
+.intro
+	dfv(,center)
+	position relative
+	z-index 1
+	margin-top vh(-16)
+	height 100%
+	padding-top vh(13)
+	@media $tovw
+		margin-top vw(-16)
+		padding-top vw(13)
+	@media $mobile
+		margin 0
+		min-height inherit
+		padding-top vm(5)
+		margin-bottom vm(5)
+	.wrapper
+		padding-left vh(58)
+		padding-right vh(30)
+		height 100%
+		width 100%
+		dfv(,center)
+		@media $tovw
+			padding-left vw(58)
+			padding-right vw(30)
+		@media $mobile
+			padding 0 vm(20)
+			height 100%
+	&__row
+		position relative
+		width 100%
+		df(center, space-between)
+		&:nth-child(3)
+			z-index 2
+			position relative
+		&--right
+			justify-content flex-end
+	&__title
+		ff $din
+		fontify vh(140) 700 1
+		color $white
+		letter-spacing .18em
+		text-transform uppercase
+		@media $tovw
+			fontify vw(140) 700 1
+		@media $mobile
+			fontify vm(44) 700 vm(53)
+			letter-spacing 0
+		&--opacity
+			opacity .8
+			@media $mobile
+				opacity 1
+	&__mtext
+		fontify vh(36) 400 vh(45)
+		color $white
+		opacity .8
+		margin-left vh(12)
+		margin-top vh(13)
+		@media $tovw
+			fontify vw(36) 400 vw(45)
+			margin-left vw(12)
+			margin-top vw(13)
+		@media $mobile
+			fontify vm(36) 400 vm(35)
+			margin-left 0
+			margin-top 0
+			margin-bottom vm(14)
+	&__stext
+		fontify vh(15) 400 vh(22)
+		letter-spacing -.02em
+		color $white
+		opacity .9
+		max-width vh(385)
+		text-align right
+		margin-right vh(36)
+		@media $tovw
+			fontify vw(15) 400 vw(22)
+			max-width vw(385)
+			margin-right vw(36)
+		@media $mobile
+			fontify vm(15) 400 vm(22)
+			margin-right 0
+			max-width 100%
+	&__mobilerow
+		margin-top vm(36)
+	&__puck
+		position absolute
+		right 31%
+		top 71%
+		transform translateY(-50%)
+		width vh(213)
+		height vh(238)
+		object-fit cover
+		@media $tovw
+			width vw(213)
+			height vw(238)
+		@media $mobile
+			right: -76%;
+			top: 88%;
+			width vm(164)
+			height vm(175.5)
+	&__bottle
+		position absolute
+		left 16%
+		bottom -56%
+		transform rotate(10deg)
+		width vh(221)
+		height vh(723)
+		object-fit cover
+		z-index 1
+		@media $tovw
+			width vw(221)
+			height vw(723)
+		@media $mobile
+			width vm(80)
+			height vm(260)
+			transform rotate(-11deg)
+			left 0
+			z-index -1

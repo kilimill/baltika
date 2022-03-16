@@ -1,0 +1,23 @@
+.fade-enter-active, 
+.fade-leave-active
+	transition opacity .5s
+
+.fade-enter,
+.fade-leave-to
+	opacity 0
+
+.header
+	opacity 0
+	transition opacity .8s
+	transition-delay 1s
+
+.footer
+	opacity 0
+	transition opacity .8s
+	transition-delay 1s
+
+.main[loaded]
+	.footer
+		opacity 1
+	.header
+		opacity 1

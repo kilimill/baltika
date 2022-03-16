@@ -1,0 +1,149 @@
+.bg
+	opacity 0
+	transition opacity .8s
+	&__red
+		width 0
+		transition width .5s
+		transition-delay .1s
+		@media $mobile
+			width 100%
+			height 0
+			transition height .5s
+	&__redtwo
+		width 0
+		transition width .5s
+		transition-delay 2s
+		@media $mobile
+			width 100%
+			height 0
+			transition height .5s
+	&__redthree
+		width 0
+		transition width .5s
+		transition-delay 2s
+		@media $mobile
+			width 100%
+			height 0
+			transition height .5s
+
+.main[loaded]
+	.bg
+		opacity 1
+
+.Intro
+	.bg[loaded]
+		.bg__red
+			width vh(368)
+			transition-delay 0s
+			@media $tovw
+				width vw(368)
+			@media $mobile
+				width 100%
+				height vm(260)
+
+.Intro
+	.bg:not([loaded])
+		.bg__red
+			transition-delay 0s
+			@media $mobile
+				transition-delay 0s
+
+.News
+	.bg[loaded]
+		.bg__red
+			width vh(368)
+			transition-delay 0s
+			@media $tovw
+				width vw(368)
+			@media $mobile
+				width 100%
+				height vm(190)
+		.bg__redthree
+			width vh(368)
+			transition-delay 0s
+			@media $tovw
+				width vw(368)
+			@media $mobile
+				width 100%
+				height vm(190)
+
+.News
+	.bg:not([loaded])
+		.bg__red
+			transition-delay 0s
+		.bg__redthree
+			transition-delay 0s
+
+.Rules
+	.bg__redtwo
+		@media $mobile
+			top auto
+			bottom 0
+	.bg[loaded]
+		.bg__redtwo
+			width vh(411)
+			transition-delay 0s
+			@media $tovw
+				width vw(411)
+			@media $mobile
+				width 100%
+				height vm(140)
+
+.Rules
+	.bg:not([loaded])
+		.bg__redtwo
+			transition-delay 0s
+
+.Gallery
+	.bg[loaded]
+		.bg__redtwo
+			width vh(460)
+			transition-delay 0s
+			@media $tovw
+				width vw(460)
+
+.Gallery
+	.bg:not([loaded])
+		.bg__redtwo
+			transition-delay 0s
+
+.Video
+	.bg[loaded]
+		.bg__redtwo
+			width vh(408)
+			transition-delay 0s
+			@media $tovw
+				width vw(408)
+			@media $mobile
+				width 100%
+				height 52%
+
+.Video
+	.bg:not([loaded])
+		.bg__redtwo
+			transition-delay 0s
+
+.Product
+	.bg__red
+		@media $mobile
+			top auto
+			bottom 0
+	.bg[loaded]
+		.bg__redtwo
+			width vh(461)
+			transition-delay 0s
+			@media $tovw
+				width vw(461)
+			@media $mobile
+				display none
+		.bg__red
+			@media $mobile
+				width 100%
+				height vm(180)
+
+.Product
+	.bg:not([loaded])
+		.bg__redtwo
+			transition-delay 0s
+		.bg__redtwo
+			transition-delay 0s

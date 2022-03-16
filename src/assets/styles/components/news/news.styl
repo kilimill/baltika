@@ -1,0 +1,603 @@
+.News
+	.main__content
+		z-index 3
+
+.ie
+	.news
+		&__img
+			&:before
+				opacity .4
+			&:after
+				opacity .4
+
+.news
+	position relative
+	z-index 1
+	@media $mobile
+		padding-top vm(11)
+	.wrapper
+		df()
+		padding 0
+		padding-left vh(89)
+		@media $tovw
+			padding-left vw(89)
+		@media $mobile
+			padding 0 vm(20)
+			flex-direction column-reverse
+	&__container
+		width 'calc(100% - %s)' %vh(376)
+		position relative
+		@media $tovw
+			width 'calc(100% - %s)' %vw(376)
+		@media $mobile
+			width 100%
+	&__prev
+		position absolute
+		left vh(-103)
+		top vh(150)
+		fontify vh(14) 400 vh(24)
+		color $white
+		opacity .7
+		transform rotate(-90deg)
+		@media $tovw
+			left vw(-103)
+			top vw(150)
+			fontify vw(14) 400 vw(24)
+		@media $mobile
+			position static
+			transform rotate(0)
+			margin-bottom vm(59)
+			margin-top vm(25)
+			fontify vm(14) 400 vm(24)
+		&:after
+			content ''
+			position absolute
+			top 50%
+			right vh(-60)
+			transform translateY(-50%)
+			width vh(43)
+			height vh(8)
+			background-size cover
+			background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 43 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.3536 4.35356C42.5488 4.15829 42.5488 3.84171 42.3536 3.64645L39.1716 0.46447C38.9763 0.269207 38.6597 0.269207 38.4645 0.464469C38.2692 0.659732 38.2692 0.976314 38.4645 1.17158L41.2929 4L38.4645 6.82843C38.2692 7.02369 38.2692 7.34028 38.4645 7.53554C38.6597 7.7308 38.9763 7.7308 39.1716 7.53554L42.3536 4.35356ZM-4.37114e-08 4.5L42 4.5L42 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z' fill='white'/%3E%3C/svg%3E%0A")
+			@media $tovw
+				right vw(-60)
+				width vw(43)
+				height vw(8)
+			@media $mobile
+				width vm(43)
+				height vm(8)
+				right vm(-60)
+	&__more
+		position absolute
+		left 27.6%
+		bottom -10%
+		fontify vh(14) 400 vh(37)
+		color rgba(255,255,255,.7)
+		width vh(120)
+		height vh(37)
+		text-align center
+		background $t
+		overflow hidden
+		cursor pointer
+		@media $tovw
+			fontify vw(14) 400 vw(37)
+			width vw(120)
+			height vw(37)
+		@media $mobile
+			position static
+			margin-bottom vm(59)
+			margin-top vm(25)
+			fontify vm(14) 400 vm(24)
+			height vm(30)
+		@media $desktop
+			&:hover
+				color #002554
+				&:before
+					width vh(120)
+					height vh(35)
+					background-color #fff
+					@media $tovw
+						width vw(120)
+						height vw(35)
+		&:before
+			content ''
+			position absolute
+			width vh(113)
+			height vh(30)
+			transform translate(-50%, -50%)
+			left 50%
+			top 50%
+			border 1px solid rgba(255,255,255,.7)
+			background-color $t
+			z-index -2
+			transition width .6s, height .6s, background .6s
+			will-change width, height
+			@media $tovw
+				width vw(113)
+				height vw(30)
+	&__list
+		width 100%
+		df(,space-between)
+		flex-wrap wrap
+		padding-top vh(19)
+		@media $tovw
+			padding-top vw(19)
+		@media $mobile
+			width 100%
+			padding-top 0
+	&__item
+		// dfv()
+		position relative
+		&:hover
+			.news__date
+				opacity .8
+			.news__title
+				opacity 1
+			.news__href
+				opacity 1
+				transform translateX(0)
+			.news__img
+				opacity .6
+				left 34%
+		&:nth-child(1)
+			// max-width vh(668)
+			widh 100%
+			margin-bottom vh(-8)
+			@media $tovw
+				// max-width vw(668)
+				margin-bottom vw(-8)
+			@media $mobile
+				max-width 100%
+				padding 0
+			.news__date
+				font-size vh(30)
+				line-height vh(32)
+				@media $tovw
+					font-size vw(30)
+					line-height vw(32)
+				@media $mobile
+					font-size vm(14)
+					line-height vm(32)
+			.news__title
+				font-size vh(60)
+				line-height vh(65)
+				@media $tovw
+					font-size vw(60)
+					line-height vw(65)
+				@media $mobile
+					font-size vm(30)
+					line-height vm(35)
+			.news__img
+				width vh(247)
+				height vh(165)
+				@media $tovw
+					width vw(247)
+					height vw(165)
+		&:nth-child(2)
+			// max-width vh(290)
+			width 50%
+			padding-left vh(63)
+			padding-top vh(44)
+			@media $tovw
+				// max-width vw(290)
+				padding-left vw(63)
+				padding-top vw(44)
+			@media $mobile
+				// max-width 100%
+				width 100%
+				padding 0
+				margin-left vm(59)
+				margin-top vm(17)
+		&:nth-child(3)
+			// max-width vh(370)
+			padding-left vh(25)
+			padding-right vh(13)
+			width 50%
+			@media $tovw
+				// max-width vw(370)
+				padding-left vw(25)
+				padding-right vw(13)
+			@media $mobile
+				// max-width 100%
+				width 100%
+				padding 0
+				margin-left 0
+				margin-right 0
+				margin-top vm(17)
+			.news__img
+				width vh(194)
+				height vh(130)
+				@media $tovw
+					width vw(194)
+					height vw(130)
+		&:nth-child(4)
+			// max-width vh(443)
+			width 50%
+			padding-top vh(50)
+			@media $tovw
+				// max-width vw(443)
+				padding-top vw(50)
+			@media $mobile
+				// max-width 100%
+				width 100%
+				padding 0
+				margin-left 0
+				margin-top vm(11)
+			.news__date
+				font-size vh(24)
+				line-height vh(32)
+				@media $tovw
+					font-size vw(24)
+					line-height vw(32)
+				@media $mobile
+					font-size vm(12)
+					line-height vm(32)
+			.news__title
+				font-size vh(30)
+				line-height vh(35)
+				@media $tovw
+					font-size vw(30)
+					line-height vw(35)
+				@media $mobile
+					font-size vm(24)
+					line-height vm(30)
+			.news__img
+				width vh(194)
+				height vh(130)
+				@media $tovw
+					width vw(194)
+					height vw(130)
+		&:nth-child(5)
+			// max-width vh(187)
+			width 50%
+			padding-right vh(73)
+			padding-top vh(75)
+			padding-left vh(120)
+			@media $tovw
+				// max-width vw(187)
+				width 50%
+				padding-right vw(73)
+				padding-top vw(75)
+				padding-left vw(120)
+			@media $mobile
+				padding 0
+				max-width 100%
+				margin-left vm(83)
+				margin-right 0
+				margin-top 0
+	&__img
+		position absolute
+		left 20%
+		top 63%
+		transform translate(-50%, -50%)
+		width vh(145)
+		height vh(100)
+		min-height vh(105)
+		min-width vh(105)
+		z-index -1
+		opacity 0
+		transition opacity .4s, left .6s
+		@media $tovw
+			width vw(145)
+			height vw(100)
+			min-height vw(105)
+			min-width vw(105)
+		@media $mobile
+			display none
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background #082963
+			mix-blend-mode color
+		&:after
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background #76B4EB
+			mix-blend-mode hard-light
+		img
+			width 100%
+			height 100%
+			object-fit cover
+	&__date
+		fontify vh(24) 700 vh(32)
+		color $white
+		margin-left vh(-11)
+		opacity .7
+		transition opacity .8s
+		@media $tovw
+			fontify vw(24) 700 vw(32)
+			margin-left vw(-11)
+		@media $mobile
+			fontify vm(12) 400 vm(32)
+			margin-left 0
+	&__title
+		fontify vh(24) 700 vh(30)
+		color $white
+		opacity .7
+		transition opacity .8s
+		@media $tovw
+			fontify vw(24) 700 vw(30)
+		@media $mobile
+			fontify vm(20) 700 vm(25)
+			margin-left vm(8)
+			opacity 1
+	&__href
+		fontify vh(14) 400 vh(24)
+		color $white
+		position relative
+		margin-left 14%
+		margin-top vh(5)
+		opacity 0
+		transition opacity .4s, transform .6s
+		transform translateX(-20%)
+		will-change transform
+		@media $tovw
+			fontify vw(14) 400 vw(24)
+			margin-top vw(5)
+		@media $mobile
+			opacity 1
+			fontify vm(14) 400 vm(24)
+			transform translateY(0)
+			margin-left 11%
+			margin-top vm(-2)
+		&:after
+			content ''
+			position absolute
+			top 50%
+			right vh(-60)
+			transform translateY(-50%)
+			width vh(43)
+			height vh(8)
+			background-repeat no-repeat
+			background-size contain
+			background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 43 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.3536 4.35356C42.5488 4.15829 42.5488 3.84171 42.3536 3.64645L39.1716 0.46447C38.9763 0.269207 38.6597 0.269207 38.4645 0.464469C38.2692 0.659732 38.2692 0.976314 38.4645 1.17158L41.2929 4L38.4645 6.82843C38.2692 7.02369 38.2692 7.34028 38.4645 7.53554C38.6597 7.7308 38.9763 7.7308 39.1716 7.53554L42.3536 4.35356ZM-4.37114e-08 4.5L42 4.5L42 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z' fill='white'/%3E%3C/svg%3E%0A")
+			@media $tovw
+				right vw(-60)
+				width vw(43)
+				height vw(8)
+			@media $mobile
+				width vm(43)
+				height vm(8)
+				right vm(-60)
+
+	&__calendar-slider
+		width 100%
+	&__calendar-container
+		df()
+		margin-right vh(-34)
+	&__calendar-score
+		fontify vh(22) 400 vh(32)
+		color $white
+		margin-left vh(10)
+		@media $tovw
+			fontify vw(22) 400 vw(32)
+			margin-left vw(10)
+	&__calendar
+		width vh(370)
+		dfv(flex-end)
+		text-align right
+		padding-right vh(90)
+		padding-top vh(23)
+		@media $tovw
+			width vw(370)
+			padding-right vw(90)
+			padding-top vw(23)
+		@media $mobile
+			width 100%
+			padding-right 0
+			padding-top 0
+			align-items center
+			text-align center
+			position relative
+			dfv()
+			padding-bottom vm(24)
+			margin-bottom vm(29)
+		.swiper-pagination
+			bottom 0
+			left 50%
+			transform translateX(-50%)
+			df()
+		.swiper-pagination-bullet
+			display none
+			@media $mobile
+				display block
+				width vm(10)
+				height vm(10)
+				margin-right vm(7)
+				border 1px solid $white
+				background-color $t
+				opacity .6
+				transition .4s opacity, .4s background
+				&:last-child
+					margin-right 0
+		.swiper-pagination-bullet-active
+			opacity 1
+			background-color $white
+	a.news__calendar-item
+		&:before
+			right vh(-135)
+	&__calendar-item
+		margin-right vh(3)
+		margin-bottom vh(30)
+		position relative
+		transition opacity .7s
+		opacity 1
+		@media $desktop
+			&:hover
+				opacity .7!important
+				transition-delay 0s
+		@media $tovw
+			margin-right vw(3)
+			margin-bottom vw(30)
+		@media $mobile
+			margin 0
+		&:last-child
+			margin-bottom 0
+		&:before
+			content ''
+			position absolute
+			right vh(-100)
+			top vh(31)
+			width vh(81)
+			height 1px
+			background-color $white
+			@media $tovw
+				right vw(-100)
+				top vw(31)
+				width vw(81)
+			@media $mobile
+				content none
+	&__calendar-title
+		fontify vh(16) 400 vh(32)
+		color $white
+		text-align right
+		letter-spacing 0.15em
+		text-transform uppercase
+		margin-bottom vh(29)
+		@media $tovw
+			fontify vw(16) 400 vw(32)
+			margin-bottom vw(29)
+	&__calendar-data
+		fontify vh(14) 400 1
+		color $white
+		opacity .8
+		@media $tovw
+			fontify vw(14) 400 1
+		@media $mobile
+			fontify vm(16) 400 vm(24)
+			margin-bottom 0
+	&__calendar-country
+		margin-top vh(-2)
+		@media $tovw
+			margin-top vh(-2)
+	&__calendar-rus
+		fontify vh(22) 400 vh(32)
+		padding-right vh(26)
+		color $white
+		position relative
+		@media $tovw
+			fontify vw(22) 400 vw(32)
+			padding-right vw(26)
+		@media $mobile
+			fontify vm(24) 400 vm(32)
+			padding-right vm(25)
+			padding-left vm(26)
+		&:before
+			content ''
+			position absolute
+			left vh(-28)
+			top 57%
+			transform translateY(-50%)
+			width vh(20)
+			height vh(12)
+			background-image url("data:image/svg+xml,%3Csvg viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0H0V4H20V0Z' fill='%23F4F4F4'/%3E%3Cpath d='M20 4H0V8H20V4Z' fill='%23323E95'/%3E%3Cpath d='M20 8H0V12H20V8Z' fill='%23D8001E'/%3E%3C/svg%3E%0A")
+			@media $tovw
+				left vw(-28)
+				width vw(20)
+				height vw(12)
+			@media $mobile
+				width vm(25)
+				height vm(15)
+				left vm(-8)
+		&:after
+			content ''
+			position absolute
+			right vh(8)
+			bottom vh(8)
+			width vh(8)
+			height vh(8)
+			background-image url("data:image/svg+xml,%3Csvg viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cline x1='6.71751' y1='0.353553' x2='0.353545' y2='6.71751' stroke='white'/%3E%3Cline x1='0.353736' y1='0.3536' x2='6.7177' y2='6.71756' stroke='white'/%3E%3C/g%3E%3C/svg%3E%0A")
+			@media $tovw
+				right vw(8)
+				bottom vw(8)
+				width vw(8)
+				height vw(8)
+			@media $mobile
+				width vm(9)
+				height vm(9)
+	&__calendar-fin
+		fontify vh(22) 400 vh(32)
+		color $white
+		padding-right vh(29)
+		position relative
+		@media $tovw
+			fontify vw(22) 400 vw(32)
+			padding-right vw(29)
+		@media $mobile
+			fontify vm(24) 400 vm(32)
+			padding-right vm(35)
+		&:before
+			content ''
+			position absolute
+			right 0
+			top 57%
+			transform translateY(-50%)
+			width vh(20)
+			height vh(12)
+			background-image url("data:image/svg+xml,%3Csvg viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0H0V12H20V0Z' fill='white'/%3E%3Cpath d='M5.56962 0V4.43478H0V7.82609H5.56962V12H8.86076V7.82609H20V4.43478H8.86076V0H5.56962Z' fill='%231F357E'/%3E%3C/svg%3E%0A")
+			@media $tovw
+				width vw(20)
+				height vw(12)
+			@media $mobile
+				width vm(25)
+				height vm(15)
+	&__calendar-sw
+		fontify vh(22) 400 vh(32)
+		color $white
+		padding-right vh(29)
+		position relative
+		@media $tovw
+			fontify vw(22) 400 vw(32)
+			padding-right vw(29)
+		@media $mobile
+			fontify vm(24) 400 vm(32)
+			padding-right vm(35)
+		&:before
+			content ''
+			position absolute
+			right 0
+			top 57%
+			transform translateY(-50%)
+			width vh(20)
+			height vh(12)
+			background-image url("data:image/svg+xml,%3Csvg viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0H0V12H20V0Z' fill='%232D5A95'/%3E%3Cpath d='M8.10104 0H5.82256V12H8.10104V0Z' fill='%23F3D02F'/%3E%3Cpath d='M20 4.69568H0V7.0435H20V4.69568Z' fill='%23F3D02F'/%3E%3C/svg%3E%0A")
+			@media $tovw
+				width vw(20)
+				height vw(12)
+			@media $mobile
+				width vm(25)
+				height vm(15)
+	&__calendar-ch
+		fontify vh(22) 400 vh(32)
+		color $white
+		padding-right vh(29)
+		position relative
+		@media $tovw
+			fontify vw(22) 400 vw(32)
+			padding-right vw(29)
+		@media $mobile
+			fontify vm(24) 400 vm(32)
+			padding-right vm(35)
+		&:before
+			content ''
+			position absolute
+			right 0
+			top 57%
+			transform translateY(-50%)
+			width vh(20)
+			height vh(12)
+			background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0H0V12H20V0Z' fill='%23C40028'/%3E%3Cpath d='M20 0H0V6H20V0Z' fill='white'/%3E%3Cpath d='M0 0V12L8.6076 6L0 0Z' fill='%2329457C'/%3E%3C/svg%3E%0A")
+			@media $tovw
+				width vw(20)
+				height vw(12)
+			@media $mobile
+				width vm(25)
+				height vm(15)

@@ -1,0 +1,69 @@
+.video
+	position relative
+	z-index 1
+	height 100%
+	df(center, center)
+	@media $mobile
+		margin auto 0
+		min-height inherit
+	&__marquee
+		position absolute
+		width 100%
+		white-space nowrap
+		overflow hidden
+		will-change transform
+		span
+			display inline-block
+			animation scroll 6s infinite linear
+			letter-spacing 0.15em
+			ff $din
+			fontify vh(180) 700 1
+			text-transform uppercase
+			color $white
+			@media $tovw
+				fontify vw(180) 700 1
+			@media $mobile
+				fontify vm(60) 700 1
+	&__frame
+		width vh(800)
+		height vh(450)
+		align-self center
+		position relative
+		z-index 1
+		filter drop-shadow(vh(4) vh(10) vh(20) rgba(0, 0, 0, 0.15))
+		background-image url('./assets/img/video-bg.jpg')
+		background-size cover
+		df(center,center)
+		@media $tovw
+			width vw(800)
+			height vw(450)
+			filter drop-shadow(vw(4) vw(10) vw(20) rgba(0, 0, 0, 0.15))
+		@media $mobile
+			width vm(279)
+			height vm(157)
+		video,
+		iframe
+			width 100%
+			height 100%
+			outline none
+	&__frame-text
+		fontify vh(35) 400 vh(45)
+		color $white
+		text-align center
+		@media $tovw
+			fontify vw(35) 400 vw(45)
+		@media $mobile
+			fontify vm(20) 400 vm(25)
+
+@keyframes scroll
+	0%
+		transform translate(0, 0)
+	100%
+		transform translate(-51%, 0)
+
+@media $mobile
+	.Video
+		.main__content
+			margin auto 0
+		.footer
+			margin-top 0

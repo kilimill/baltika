@@ -1,0 +1,98 @@
+.gallery
+	&__title
+		opacity 0
+		transform translateY(100%)
+		transition opacity .8s, transform .8s
+		will-change transform
+	&__item
+		&:nth-child(1)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+		&:nth-child(2)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+		&:nth-child(3)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+		&:nth-child(4)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+		&:nth-child(5)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+	&__btn
+		opacity 0
+		transform translateY(100%)
+		transition opacity .8s, transform .8s
+		will-change transform
+
+.gallery[loaded]
+	.gallery
+		&__title
+			opacity 1
+			transform translateY(0)
+			transition-delay .2s
+		&__item
+			&:nth-child(1)
+				opacity 1
+				transform translateY(0)
+				transition-delay .4s
+			&:nth-child(2)
+				opacity 1
+				transform translateY(0)
+				transition-delay .5s
+			&:nth-child(3)
+				opacity 1
+				transform translateY(0)
+				transition-delay .6s
+			&:nth-child(4)
+				opacity 1
+				transform translateY(0)
+				transition-delay .7s
+			&:nth-child(5)
+				opacity 1
+				transform translateY(0)
+				transition-delay .8s
+		&__btn
+			opacity 1
+			transform translateY(0)
+			transition-delay 1s
+
+.gallery.hidden
+	.gallery
+		&__item
+			&:nth-child(1)
+				opacity 0
+				transform translateY(100%)
+				transition opacity .8s, transform .8s!important
+				will-change transform
+			&:nth-child(2)
+				opacity 0
+				transform translateY(100%)
+				transition opacity .8s, transform .8s!important
+				will-change transform
+			&:nth-child(3)
+				opacity 0
+				transform translateY(100%)
+				transition opacity .8s, transform .8s!important
+				will-change transform
+			&:nth-child(4)
+				opacity 0
+				transform translateY(100%)
+				transition opacity .8s, transform .8s!important
+				will-change transform
+			&:nth-child(5)
+				opacity 0
+				transform translateY(100%)
+				transition opacity .8s, transform .8s!important
+				will-change transform

@@ -1,0 +1,70 @@
+.Product
+	&:before
+		opacity 0
+		transition opacity .8s
+
+.product
+	&__title
+		&:nth-child(2)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+		&:nth-child(3)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+		&:nth-child(4)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+		&:nth-child(5)
+			opacity 0
+			transform translateY(100%)
+			transition opacity .8s, transform .8s
+			will-change transform
+	&__players
+		opacity 0
+		transition opacity .8s
+	&__b7
+		opacity 0
+		transition opacity .8s, transform .8s
+		transform translateY(100%) rotate(9deg)
+		will-change transform
+		@media $mobile
+			transform translateY(100%) rotate(-10deg)
+
+.Product[mobileloaded]
+	&:before
+		opacity 1
+		// transition-delay .2s
+
+.product[loaded]
+	.product__title
+		&:nth-child(2)
+			opacity 1
+			transform translateY(0)
+			// transition-delay .5s
+		&:nth-child(3)
+			opacity 1
+			transform translateY(0)
+			// transition-delay .9s
+		&:nth-child(4)
+			opacity 1
+			transform translateY(0)
+			// transition-delay 1.3s
+		&:nth-child(5)
+			opacity 1
+			transform translateY(0)
+			// transition-delay 1.6s
+	.product__players
+		opacity 1
+		// transition-delay .2s
+	.product__b7
+		opacity 1
+		// transition-delay 1.8s
+		transform translateY(0) rotate(9deg)
+		@media $mobile
+			transform translateY(0) rotate(-10deg)

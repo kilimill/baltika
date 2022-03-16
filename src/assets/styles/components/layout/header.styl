@@ -1,0 +1,256 @@
+.header
+	padding-top vh(21)
+	width 100%
+	z-index 4
+	position relative
+	@media $tovw
+		padding-top vw(21)
+	@media $mobile
+		padding-top vm(20)
+	.wrapper
+		df(center,space-between)
+		position relative
+		@media $mobile
+			align-items flex-start
+	&__link
+		display inline-block
+	&__logo
+		width vh(101)
+		height vh(20)
+		@media $tovw
+			width vw(101)
+			height vw(20)
+		@media $mobile
+			width vm(101)
+			height vm(20)
+	&__logos
+		margin-top vm(-5)
+	&__logos-container
+		df(center)
+	&__logos-baltika
+		width vm(45)
+		height vm(36)
+		margin-right vm(12)
+	&__logos-hockey
+		width vm(46)
+		height vm(47)
+	&__logos-text
+		fontify vm(9) 400 vm(10)
+		opacity .7
+		color $white
+		text-align center
+		margin-top vm(-5)
+	&__nav
+		visibility hidden
+		opacity 0
+		position fixed
+		top 0
+		left 0
+		height 100vh
+		width 100vw
+		z-index 4
+		dfv()
+		transition .5s opacity, .5s visibility, .8s left
+		@media $desktop
+			width vh(326)
+			background-color #082963
+			left vh(-326)
+			opacity 1
+			visibility visible
+		@media $tovw
+			width vw(326)
+			left vw(-326)
+		&.active
+			visibility visible
+			opacity 1
+		&:before
+			content ''
+			position absolute
+			bottom vm(5)
+			right vm(5)
+			background-image url('./assets/img/alcohol.png')
+			background-size cover
+			width vm(60)
+			height vm(60)
+			z-index 2
+			@media $desktop
+				display none
+	&__nav-bg
+		position absolute
+		left 0
+		top 0
+		right 0
+		bottom 0
+		@media $desktop
+			display none
+		img
+			width 100%
+			height 100%
+			object-fit cover
+			opacity .2
+		&:after
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background #082963
+			mix-blend-mode color
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background #0b1930
+			opacity .2
+	&__nav-list
+		margin auto 0
+		position relative
+		z-index 2
+		dfv()
+		width 100vw
+		@media $desktop
+			width 100%
+			margin 0
+			margin-top vh(130)
+		@media $tovw
+			margin-top vw(130)
+	&__nav-item
+		font-family $din
+		fontify vm(40) 700 vm(40)
+		text-transform uppercase
+		color $white
+		padding vm(10) vm(27)
+		text-shadow 0px 4px 20px rgba(12, 28, 55, 0.2)
+		position relative
+		width 100%
+		cursor pointer
+		@media $desktop
+			fontify vh(40) 700 vh(40)
+			padding vh(10) vh(27)
+			text-shadow 0px 4px 20px rgba(12, 28, 55, 0.2)
+			transition .7s color
+			&:hover
+				color rgba(255,255,255,.6)
+		@media $tovw
+			fontify vw(40) 700 vw(40)
+			padding vw(10) vw(27)
+		&:last-child
+			margin-bottom 0
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left 0
+			width 100%
+			height 100%
+			transform translateY(-50%)
+			opacity 0
+			background #FF0101
+			z-index -1
+			@media $desktop
+				background #C11C1C
+		&.active
+			&:before
+				opacity .6
+				@media $desktop
+					opacity 1
+	&__burger
+		df(center, center)
+		size vm(20)
+		pos absolute
+		top vm(6)
+		left 50.2%
+		transform translate(-50%, -50%)
+		z-index 6
+		@media $ie
+			t 45%
+		@media $desktop
+			size vh(20) 20px
+			top 50%
+		@media $tovw
+			size vw(20) 20px
+		&-line
+			db()
+			position absolute
+			size vm(14) vm(2)
+			bgc $white
+			left vm(2)
+			transition all .4s ease-in-out
+			@media $desktop
+				size vh(20) 3px
+				left 2px
+			@media $tovw
+				size vw(20) 3px
+			&--el1
+				top vm(13)
+				@media $desktop
+					top 15px
+			&--el2, &--el3
+				top vm(9)
+				@media $desktop
+					top 9px
+			&--el4
+				bottom vm(13px)
+				@media $desktop
+					bottom 14px
+
+		&.active
+			.header__burger-line
+				&--el1
+					transform translateX(vm(40))
+					background-color transparent
+					@media $desktop
+						transform translateX(vh(40))
+					@media $tovw
+						transform translateX(vw(40))
+				&--el2
+					transform rotate(45deg)
+					width vm(14)
+					left vm(2)
+					@media $desktop
+						width vh(20)
+						left vh(3)
+					@media $tovw
+						width vw(20)
+						left vw(3)
+				&--el3
+					transform rotate(-45deg)
+					width vm(14)
+					left vm(2)
+					@media $desktop
+						width vh(20)
+						left vh(3)
+					@media $tovw
+						width vw(20)
+						left vw(3)
+				&--el4
+					transform translateX(vm(-40))
+					background-color transparent
+					@media $desktop
+						transform translateX(vh(-40))
+					@media $tovw
+						transform translateX(vw(-40))
+	&__prev
+		position absolute
+		left vh(29)
+		bottom vh(-15)
+		fontify vh(16) 400 1
+		color $white
+		opacity .7
+		border-bottom 1px solid $white
+		transition .5s border-color
+		@media $desktop
+			&:hover
+				border-color $t
+		@media $tovw
+			left vw(29)
+			bottom vw(-15)
+			fontify vw(16) 400 1
+		@media $mobile
+			left vm(20)
+			bottom vm(5)
+			fontify vm(12) 400 vm(24)
